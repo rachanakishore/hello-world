@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+  <channel>
+    <title>DKFindOut!</title>
+    <link>http://dkfindout.com/uk/</link>   
+    <language>en-GB</language>
+    <item>
+      <title>Thomas Edison invented the light bulb all the way back in 1880!</title>
+      <!--<link>http://www.dkfindout.com/uk/science/amazing-inventions/light-bulb/</link>-->
+      <link>LightBulb.html</link>
+      
+      <content:encoded>
+        <![CDATA[<div><a href="http://www.dkfindout.com/uk/science/amazing-inventions/light-bulb/"><img src="http://res.cloudinary.com/dk-find-out/image/upload/q_80,w_400/PAL_70017960_oe2pw8.jpg" class="attachment-tzmedium size-tzmedium" alt="PAL 70017960 oe2pw8"/></a></div> 
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>Sport is a good way to stay fit and maintain a healthy body.</title>
+      <link>Sports.html</link>
+      
+      <category><![CDATA[Tutorials]]></category>
+      <category><![CDATA[CSS3]]></category>
+      <category><![CDATA[Quick Learn]]></category>
+      <content:encoded>
+        <![CDATA[<div><a href="http://www.dkfindout.com/uk/sports/"><img width="60%" src="http://res.cloudinary.com/dk-find-out/image/upload/q_80,w_400/MA_00007128_ytgpu2.jpg" alt="MA 00007128 ytgpu2" class="attachment-tzmedium size-tzmedium"/></a></div> 
+       ]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>Our past is full of events that changed the course of history.</title>
+      <link></link>
+      <content:encoded>
+        <![CDATA[<div><a href="http://www.dkfindout.com/uk/history/"><img width="100% src="http://res.cloudinary.com/dk-find-out/image/upload/q_80,w_400/100_events_that_made_history_1_ggxxt4.jpg" alt="100 events that made history 1 ggxxt4" class="attachment-tzmedium size-tzmedium" /></a></div> 
+        ]]>
+      </content:encoded>    
+    </item> 
+  </channel>
+</rss>
