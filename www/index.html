@@ -1,29 +1,98 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-	
-	 <link rel="icon" href="images/favicon.png" type="image/png">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-	<title>DKFindOut!</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
-	<link rel="stylesheet" href="css/jquery.flipster.min.css">
-	<link rel="stylesheet" href="css/styles.css">
+    <title>DKFindOut!</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .container {
+            max-width: 400px;
+            background-color: black;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+            .container div {
+                background-color: white;
+                width: 100%;
+                display: inline-block;
+                display: none;
+            }
+
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+
+        button {
+            position: absolute;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        .prev {
+            left: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        var currentIndex = 0,
+  items = $('.container div'),
+  itemAmt = items.length;
+
+        function cycleItems() {
+            var item = $('.container div').eq(currentIndex);
+            items.hide();
+            item.css('display', 'inline-block');
+        }
+
+        var autoSlide = setInterval(function () {
+            currentIndex += 1;
+            if (currentIndex > itemAmt - 1) {
+                currentIndex = 0;
+            }
+            cycleItems();
+        }, 3000);
+
+        $('.next').click(function () {
+            clearInterval(autoSlide);
+            currentIndex += 1;
+            if (currentIndex > itemAmt - 1) {
+                currentIndex = 0;
+            }
+            cycleItems();
+        });
+
+        $('.prev').click(function () {
+            clearInterval(autoSlide);
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = itemAmt - 1;
+            }
+            cycleItems();
+        });
+    </script>
 
 </head>
 <body>
-	<div class="app">
-		<div class="flipster">
-			<ul></ul>
-		</div>
-	</div>
-    <!--<p class="stats"></p>-->
+    <section class="demo">
+        <button class="next">></button>
+        <button class="prev"><</button>
+        <div class="container">
+
+        </div>
+    </section>
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.flipster.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -15,10 +15,8 @@ $(function () {
     var gui = require('nw.gui');
 
 
-    // Fetch the recent posts on Tutorialzine
-
-    var ul = $('.flipster ul');
-
+    //var ul = $('.flipster ul');
+    var ul = $('.container');
     $.ajax({
         type: "GET",
         url: "Feed.xml",
@@ -33,8 +31,8 @@ $(function () {
                 // Fetch the first image of the article
                 var imageSource = content.match(urlRegex)[1];
 
-                // Create a li item for every article, and append it to the unordered list
-                var li = $('<li><img /><a target="_self"></a></li>');
+                // Create a div item for every article, and append it to the unordered list
+                var li = $('<div style="display: inline-block;><img /><a target="_self"></a></div>');
 
                 li.find('a')
                     .attr('href', item.find('link').text())
@@ -47,21 +45,21 @@ $(function () {
             });
             // Initialize the flipster plugin
 
-            $('.flipster').flipster({
-                style: 'carousel'
-            });
+            //$('.flipster').flipster({
+            //    style: 'carousel'
+            //});
 
             // When an article is clicked, open the page in the system default browser.
             // Otherwise it would open it in the node-webkit window which is not what we want.
 
-            $('.flipster').on('click', 'a', function (e) {
+           // $('.flipster').on('click', 'a', function (e) {
 
                 //			e.preventDefault();
                 //			
                 //		//	 Open URL with default browser.
                 //			gui.Shell.openExternal(e.target.href);
 
-            });
+           // });
         }
     });
 
