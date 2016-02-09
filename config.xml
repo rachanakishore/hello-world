@@ -75,4 +75,7 @@
 <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+<platform name="windows">
+        <allow-intent href="market:*" />
+    </platform>
 </widget>
