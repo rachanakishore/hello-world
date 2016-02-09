@@ -8,8 +8,8 @@ $(function () {
     var os = require('os');
     var prettyBytes = require('pretty-bytes');
 
-    //$('.stats').append('Number of cpu cores: <span>' + os.cpus().length + '</span>');
-    //$('.stats').append('Free memory: <span>' + prettyBytes(os.freemem()) + '</span>');
+    $('.stats').append('Number of cpu cores: <span>' + os.cpus().length + '</span>');
+    $('.stats').append('Free memory: <span>' + prettyBytes(os.freemem()) + '</span>');
 
     // Node webkit's native UI library. We will need it for later
     var gui = require('nw.gui');
